@@ -1,0 +1,6 @@
+- name: vars from inventory, host specific
+  hosts: web
+  tasks:
+    - name: print the information
+      ansible.builtin.debug:
+        msg: "{{ User }} - {{ Profession }}"
