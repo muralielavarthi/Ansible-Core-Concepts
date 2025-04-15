@@ -1,0 +1,17 @@
+- name: variables
+  hosts: local
+  connection: local
+  vars: # play level variables or global variables
+    Name: murali
+    Age: 30
+    City: BNG
+    salary: 2000
+  tasks:
+    - name: print variables
+      vars: # task level variables or local variables, accessible only with in the task.
+        Name: krishna
+        Age: 33
+        City: CTR
+      ansible.builtin.debug:
+        msg: "{{ Name }}, {{ Age }}, {{ City }} {{ salary }}"
+#Task variables can override play level variables
