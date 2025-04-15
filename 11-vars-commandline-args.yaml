@@ -1,0 +1,9 @@
+- name: vars from command line args
+  hosts: local
+  connection: local
+  tasks:
+    - name: print the information
+      ansible.builtin.debug:
+        msg: "{{ job }}, {{ city }}"
+        #space before and after variable is mandatory while printing
+        #recommended to keep lowercase variable names
