@@ -1,0 +1,8 @@
+- name: facts playbook
+  hosts: web2
+  tasks:
+    - name: printing facts information
+      ansible.builtin.debug:
+        msg: " printing facts info {{ ansible_facts }}"
+#facts.json file - the structure will be same for all
+#distributions of Linux, only fields will change.
