@@ -1,0 +1,5 @@
+- name: PING # name of the playbook.
+  hosts: web # Targets the frontend group in your inventory file.
+  tasks: # A list of tasks to run.
+    - name: ping the server # name of the task.
+      ansible.builtin.ping: # A built-in Ansible module that checks if a host is reachable
