@@ -6,9 +6,9 @@
       prompt: "enter user name"
       private: false
     - name: password
-      prompt: "eneter password"
+      prompt: "enter password"
       private: true # confidential information, the typed information will not be visible
   tasks:
     - name: print variables
       ansible.builtin.debug:
-        msg: "{{ name }} and {{ password }}"
+        msg: "{{ Username }} and {{ password }}"
