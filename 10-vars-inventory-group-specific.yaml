@@ -1,0 +1,6 @@
+- name: vars from inventory fle
+  hosts: frontend
+  tasks:
+    - name: print the information
+      ansible.builtin.debug:
+        msg: "{{Job type }}"
