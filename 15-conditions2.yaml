@@ -1,0 +1,16 @@
+- name: conditions playbook
+  hosts: web2
+  gather_facts: yes
+  tasks:
+    - name: install nginx if RHEL
+      ansible.builtin.package:
+        name: git
+        state: present
+      when: ansible_os_family == "RedHat"
+    - name: install nginx if Ubuntu
+      ansible.builtin.package:
+        name: nginx
+        state: present
+      when: ansible_os_family == "Ubuntu"
+      #writing conditions using facts gathered by ansible in playbook.
+      #ansible_os_family is variblae present ansible_facts
