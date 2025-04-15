@@ -1,3 +1,4 @@
+# multiple plays in same playbook
 - name: play 1
   hosts: local
   connection: local # Ansible managing its own node, no need of ssh credentials
