@@ -1,0 +1,18 @@
+- name: conditions playbook
+  hosts: local
+  connection: local
+  gather_facts: no
+  vars:
+    mynumber: 20
+  tasks:
+    - name: print number is greater than 10
+      ansible.builtin.debug:
+        msg: "{{ mynumber }} is greater than 10"
+      when: mynumber >10
+    - name: print number is less than equal to 10
+      ansible.builtin.debug:
+        msg: "{{ mynumber }} is less than 10"
+      when: mynumber <=10
+# to run a task, for decision we use when keyword
+# for false statment it will show, local host is skipping in ouput
+# # only if and when, then are in ansible
