@@ -4,4 +4,4 @@
   tasks:
     - name: print the information
       ansible.builtin.debug:
-        msg: "{{ name }} - {{ profession }}"
+        msg: "{{ User }} - {{ Profession }}"
