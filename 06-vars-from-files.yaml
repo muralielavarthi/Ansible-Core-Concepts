@@ -1,7 +1,9 @@
 - name: variables from files
   hosts: local
   connection: local
-  vars_files:
-    - vars_file.yaml
+  vars_files: # vars from files
+    - contact.yaml
   tasks:
-    - name: print variables
+    - name: print information
+      ansible.builtin.debug:
+        msg: "{{ Village }} {{ State }} {{ Country }}"
