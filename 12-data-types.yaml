@@ -12,6 +12,7 @@
       ci: jenkins
       cloud: aws
     working: true #boolean
-  tasks: print the information
-  ansible.builtin.debug:
-    msg: "{{ job }}, {{ salary }}, {{ tech }}, {{ techstack }} and {{ working }}"
+  tasks:
+    - name: print the information
+      ansible.builtin.debug:
+        msg: "{{ job }}, {{ salary }}, {{ tech }}, {{ techstack }} and {{ working }}"
