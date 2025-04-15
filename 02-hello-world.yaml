@@ -1,0 +1,6 @@
+- name: hello playbook
+  hosts: frondend
+  tasks:
+    - name: print hello world
+      ansible.builtin.package:
+        msg: "Hello world"
