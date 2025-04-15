@@ -1,0 +1,14 @@
+- name: vars from prompt
+  hosts: local
+  connection: local
+  vars_prompt:
+    - name: Username # variable name
+      prompt: "enter user name"
+      private: false
+    - name: password
+      prompt: "eneter password"
+      private: true # confidential information, the typed information will not be visible
+  tasks:
+    - name: print variables
+      ansible.builtin.debug:
+        msg: "{{ name }} and {{ password }}"
