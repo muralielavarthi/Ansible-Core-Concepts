@@ -1,0 +1,17 @@
+- name: data types
+  hosts: local
+  connection: local
+  vars:
+    job: software #string
+    salary: 20000 #number
+    tech: #list - []
+      - linux:
+      - shell:
+      - shell scripting:
+    techstack: #map or dictionary - {} - key value pairs
+      ci: jenkins
+      cloud: aws
+    working: true #boolean
+  tasks: print the information
+  ansible.builtin.debug:
+    msg: "{{ job }}, {{ salary }}, {{ tech }}, {{ techstack }} and {{ working }}"
