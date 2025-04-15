@@ -1,0 +1,15 @@
+- name: play 1
+  hosts: local
+  connection: local # Ansible managing its own node, no need of ssh credentials
+  tasks:
+    - name: task 1
+      ansible.builtin.debug:
+        msg: "play 1 and task 1"
+
+- name: play 2
+  hosts: local
+  connection: local
+  tasks:
+    - name: task2
+      ansible.builtin.debug:
+        msg: "play 2 and task 2"
