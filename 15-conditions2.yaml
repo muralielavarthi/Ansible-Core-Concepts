@@ -1,9 +1,8 @@
 - name: conditions playbook
   hosts: web2
-  gather_facts: yes
   become: yes
   tasks:
-    - name: install nginx if RHEL
+    - name: install git if RHEL
       ansible.builtin.package:
         name: git
         state: present
