@@ -6,4 +6,4 @@
   tasks:
     - name: print information
       ansible.builtin.debug:
-        msg: "{{ Village }} {{ State }} {{ Country }}"
+        msg: "{{ Village }}, {{ State }}, {{ Country }}"
