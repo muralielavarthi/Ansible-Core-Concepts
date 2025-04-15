@@ -1,4 +1,4 @@
-- name: vars form inventory, host specific
+- name: vars from inventory, host specific
   hosts: local
   connection: local
   tasks:
