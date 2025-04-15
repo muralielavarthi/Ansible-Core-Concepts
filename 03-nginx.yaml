@@ -1,5 +1,5 @@
 - name: install nginx playbook
-  hosts: frontend-servers # we should mention only one group here.
+  hosts: frontend # we should mention only one group here.
   become: yes # becoming root user
   tasks:
     - name: install nginx
