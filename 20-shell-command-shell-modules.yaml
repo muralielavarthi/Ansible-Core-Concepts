@@ -10,7 +10,7 @@
       ansible.builtin.command: ls -l >/tmp/output2.txt
       register: command_result
 
-    - name: ls command using command module
+    - name: ls command using command module 2
       ansible.builtin.command: lk -l >/tmp/output3.txt
       register: comman_result2
 
