@@ -4,7 +4,7 @@
   tasks:
     - name: print details
       ansible.builtin.package:
-        name: { { item } }
+        name: "{{ item }}" # variables should be in double quotes
         state: present
       loop:
         - git
