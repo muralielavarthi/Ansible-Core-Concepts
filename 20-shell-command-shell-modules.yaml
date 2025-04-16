@@ -11,10 +11,10 @@
       ansible.builtin.command: ls -l
       register: command_result
 
-    - name: ls command using command module 2
-      ansible.builtin.command: lk -l
-      register: comman_result2
-
     - name: print the details
       ansible.builtin.debug:
         msg: "{{ command_result}}"
+
+    - name: ls command using command module 2
+      ansible.builtin.command: lk -l
+      register: comman_result2
