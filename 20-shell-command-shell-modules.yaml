@@ -1,0 +1,19 @@
+- name: shell and command module
+  hosts: local
+  connection: local
+  gather_facts: no
+  tasks:
+    - name: ls command using shell module
+      ansible.builtin.shell: ls -l >/tmp/output.txt
+
+    - name: ls command using command module
+      ansible.builtin.command: ls -l >/tmp/output2.txt
+      register: command_result
+
+    - name: ls command using command module
+      ansible.builtin.command: lk -l >/tmp/output3.txt
+      register: comman_result2
+
+    - name: print the details
+      ansible.builtin.debug:
+        msg: "{{ command_result}}"
