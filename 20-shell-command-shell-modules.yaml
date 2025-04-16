@@ -17,4 +17,4 @@
 
     - name: ls command using command module 2
       ansible.builtin.command: lk -l
-      register: comman_result2
+      register: command_result2
