@@ -1,6 +1,7 @@
 - name: filters playbook
   hosts: local
   connection: local
+  gather_facts: no
   tasks:
     - name: lower to upper case
       vars:
