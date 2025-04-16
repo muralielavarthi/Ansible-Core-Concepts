@@ -40,7 +40,7 @@
       ansible.builtin.debug:
         msg: "{{ fruits | split(',') }}"
     - name: handle undefine variable
-      ansible.bulitin.debug:
+      ansible.builtin.debug:
         msg: " {{ person | default('murali') }}"
     - name: check IP address is valid or not
       vars:
