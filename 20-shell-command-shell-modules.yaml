@@ -8,7 +8,7 @@
 
     - name: ls command using command module
       #ansible.builtin.command: ls -l >/tmp/output2.txt # error, since no access to redirections
-      ansible.builtin.command: ls -l
+      ansible.builtin.command: echo "hello world"
       register: command_result #using register keyword will store the output of the command.
 
     - name: print the details
