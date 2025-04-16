@@ -7,11 +7,12 @@
       ansible.builtin.shell: ls -l >/tmp/output.txt
 
     - name: ls command using command module
-      ansible.builtin.command: ls -l >/tmp/output2.txt
+      #ansible.builtin.command: ls -l >/tmp/output2.txt # error, since no access to redirections
+      ansible.builtin.command: ls -l
       register: command_result
 
     - name: ls command using command module 2
-      ansible.builtin.command: lk -l >/tmp/output3.txt
+      ansible.builtin.command: lk -l
       register: comman_result2
 
     - name: print the details
