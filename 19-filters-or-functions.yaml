@@ -4,10 +4,13 @@
   gather_facts: no
   tasks:
     - name: lower to upper case
+      tags:
+        - lower to upper
       vars:
         username: Murali
       ansible.builtin.debug:
         msg: "{{ username | upper }}"
+
     - name: upper to lower
       vars:
         username: MURALI
