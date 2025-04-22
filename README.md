@@ -1,1 +1,1 @@
-Ansible core concepts 
+Ansible core concepts (latest one)
